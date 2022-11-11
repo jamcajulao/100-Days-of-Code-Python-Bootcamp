@@ -27,8 +27,8 @@ TG_BOT_CHATID = ""
 # ------------------- REQUEST WEATHER DATA -------------------
 OWM_URL = "https://api.openweathermap.org/data/2.5/onecall"
 OWM_PARAMS = {
-    "lat": 3.1569,
-    "lon": 101.7123,
+    "lat": MY_LAT,
+    "lon": MY_LONG,
     "appid": OWM_API_KEY,
     "exclude": "current,minutely,daily",
 }
