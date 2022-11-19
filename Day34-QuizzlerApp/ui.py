@@ -2,7 +2,10 @@ from tkinter import *
 from quiz_brain import QuizBrain
 
 THEME_COLOR = "#375362"
-FONT = ("Arial", 20, "italic")
+HEADING_FONT = ("Arial", 40, "bold")
+SUBHEADING_FONT = ("Arial", 30, "bold")
+TEXT_FONT = ("Arial", 20, "italic")
+CHOICES_FONT = ("Arial", 14, "normal")
 
 
 class QuizInterface:
@@ -10,18 +13,20 @@ class QuizInterface:
     def __init__(self, quiz_brain: QuizBrain):
         self.quiz = quiz_brain
 
+        # |-------------------------- QUIZ WINDOW --------------------------|
         self.window = Tk()
         self.window.title("Quizzler")
         self.window.config(bg=THEME_COLOR, padx=50, pady=20)
 
-        self.quizzler = Label(text="Quizzler", fg="white", bg=THEME_COLOR, font=("Arial", 40, "bold"))
+        self.quizzler = Label(text="Quizzler", fg="white", bg=THEME_COLOR, font=HEADING_FONT)
         self.quizzler.grid(row=0, column=0, columnspan=2)
 
-        self.score = Label(text=f"Score: 0", fg="white", bg=THEME_COLOR, font=("Arial", 25, "bold"))
+        self.score = Label(text=f"Score: 0", fg="white", bg=THEME_COLOR, font=SUBHEADING_FONT)
         self.score.grid(row=1, column=0, columnspan=2)
 
         self.canvas = Canvas(width=300, height=250, bg="white", highlightthickness=0)
-        self.question_text = self.canvas.create_text(150, 125, text="Question Text", font=FONT, fill="black", width=280)
+        self.question_text = self.canvas.create_text(150, 125, text="Question Text", font=TEXT_FONT,
+                                                     fill="black", width=280)
         self.canvas.grid(row=2, column=0, columnspan=2, pady=50)
 
         true_img = PhotoImage(file="images/true.png")
@@ -64,6 +69,4 @@ class QuizInterface:
     def buttons_state(self, state_):
         self.true_button.config(state=state_)
         self.false_button.config(state=state_)
-
-
 
