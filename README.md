@@ -4,6 +4,16 @@
 
 ## Intermediate+
 
+### Day 34: Quizzler App
+
+A UI Trivia Quiz Application using an API from Open Trivia Database to
+generate a random set of questions everytime the app is run.
+
+- Update: Added functionality for selecting the difficulty and 
+category of questions before the quiz.
+
+---
+
 ### Day 35: Rain Alert
 
 Checks the weather forecast for the day if it is going to rain
