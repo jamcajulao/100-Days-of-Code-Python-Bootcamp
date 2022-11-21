@@ -38,3 +38,8 @@ recording today's habit record, updating and deleting a habit record.
 
 ### Day 38: Workout Tracker
 
+A workout tracker that asks the user what exercises they did for the day.
+The user can type their exercises using natural language and the programs
+logs the date, time, exercise, duration and calories into a Google Sheet.
+
+---
