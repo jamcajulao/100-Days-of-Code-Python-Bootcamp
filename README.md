@@ -33,3 +33,8 @@ when there is significant change in their stock price.
 Records and tracks your habits and presents a pixel graph 
 using API. Features include creating an account, creating a graph,
 recording today's habit record, updating and deleting a habit record.
+
+---
+
+### Day 38: Workout Tracker
+
